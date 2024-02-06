@@ -1,0 +1,300 @@
+:root{
+    --primary-color: cyan;
+    --progressbar-hover: darkcyan;
+    --dark-background: #4667;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Arial';
+    color: white;
+}
+
+body{
+    background: #112;
+    min-height: 100vh;
+}
+.fullscreen{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.full{
+    width: 100%;
+    height: 100%;
+}
+
+a{text-decoration: underline;}
+a.link{color: dodgerblue;}
+
+.comment{color: #AAA;}
+.big{font-size: 1.2rem;}
+
+.row, .column, .center, .row-around, .row-spaced{display: flex;}
+.column{flex-direction: column;}
+
+.center, .row-around, .row-spaced{align-items: center;}
+.center{justify-content: center;}
+.row-around{justify-content: space-around;}
+.row-spaced{justify-content: space-between;}
+
+.blackblur{
+    background: #0005;
+    backdrop-filter: blur(5px);
+}
+
+.textright{text-align: right;}
+.textcenter{text-align: center;}
+
+#loading_screen{
+    gap: 20px;
+    transition: 0.2s ease;
+}
+
+#loading_text{
+    z-index: 0;
+}
+
+#loading_bar{
+    border: solid 1px white;
+    height: 25px;
+    width: 50vw;
+}
+
+#loading_bg{
+    transition: none;
+    width: 0;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+#ui{
+    pointer-events: none;
+}
+
+.buttonbar{
+    pointer-events: initial;
+    padding: 10px;
+    min-width: 400px;
+    width: 50%;
+    gap: 20px;
+}
+
+.buttonbar > button{
+    flex: 1;
+}
+
+button{
+    padding: 5px;
+    outline: none;
+    border: solid 2px #CCC;
+    color: #AAA;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+button:hover{
+    border-color: white;
+    color: white;
+}
+
+button:active{
+    border-color: dodgerblue;
+    color: dodgerblue;
+}
+
+.floatsection{
+    position: fixed;
+    padding: 20px;
+    
+    animation: none 0.8s ease-in-out 0s;
+    animation-fill-mode: both;
+    
+    transition: 0.2s ease-out;
+    transition-property: background-color scale;
+}
+
+.floatsection, .floatsection section{gap: 15px;}
+
+.floatsection:hover{
+    background-color: #0037;
+}
+
+.floatsection article{
+    flex-wrap: wrap;
+}
+
+.floatsection.show{animation-name: show;}
+.floatsection.hide{animation-name: hide;}
+@keyframes show{to{translate: 0 0;}}
+@keyframes hide{from{translate: 0 0;}}
+
+.barcontainer{
+    padding: 5px;
+    cursor: default;
+    user-select: none;
+}
+
+.barcontainer:hover > *{color: var(--progressbar-hover);}
+.barcontainer:hover > .progressbar{border-color: var(--progressbar-hover);}
+
+.progressbar{
+    width: 50%;
+    height: 1.2vh;
+    min-height: 12px;
+    border: white solid 2px;
+    position: relative;
+}
+
+.progress{
+    animation: none cubic-bezier(.17,.67,.51,.88) both;
+}
+
+.progress, .progress > div{
+    position: absolute;
+    top: 0; left: 0; height: 100%;
+}
+
+.progress > div{
+    width: 100%;
+    animation: progresspulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes progresspulse{from{background-color: darkturquoise;} to{background-color: turquoise;}}
+
+.progress.show{animation-name: progressshow; animation-duration: 1s;}
+.progress.hide{animation-name: progresshide; animation-duration: 0.7s;}
+@keyframes progressshow{0%{width: 0;} 40%{width:0}}
+@keyframes progresshide{to{width: 0;}}
+
+.linejoin{
+    margin: 0 10px;
+    flex: 1;
+    border-bottom: solid 1px white;
+}
+
+.smallvpad{
+    padding: 8px 0;
+}
+
+.padlines > *{
+    padding: 4px 0;
+}
+
+#softskills{
+    gap: 10px;
+}
+
+#softskills > *{
+    padding: 5px;
+    background: var(--dark-background);
+}
+
+.eventbox{
+    display: flex;
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--dark-background);
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.event{
+    flex: 1;
+}
+
+.eventbox h4{text-wrap: nowrap;}
+.event .comment{font-size: 0.9rem;}
+
+.separator{
+    background: #5558;
+    margin: 5px;
+    padding: 2px 0;
+}
+
+.smalllist{
+    margin: 10px;
+    margin-left: 30px;
+    font-size: 0.9rem;
+}
+
+.description{
+    overflow: hidden;
+    max-height: 2.6rem;
+    transition: 0s ease;
+}
+
+.descriptioncontainer::after{
+    content: '... (hover to see more)';
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.floatsection:hover .description{max-height: 1000px;}
+.floatsection:hover .descriptioncontainer::after{content: '';}
+
+.containertype{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #AAA;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.cornerbutton{
+    position: fixed;
+    top: 20px; right: 20px;
+}
+
+#lightbox{
+    display: none;
+    transition: 0.4s ease-out;
+    transition-property: background-color, backdrop-filter;
+}
+
+#lightbox.hide{background-color: #0000; backdrop-filter: blur(0px);}
+#lightbox.hide > button{opacity: 0;}
+
+#lightboxcontainer{
+    width: 90%;
+    height: 90%;
+    translate: 0 -100vh;
+    animation: none 0.5s ease-in-out;
+    animation-fill-mode: both;
+    pointer-events: none;
+}
+
+#lightboxcontainer.show{animation-name: show;}
+#lightboxcontainer.hide{animation-name: hide;}
+
+#lightboxcontainer img{
+    max-width: 100%;
+    max-height: 100%;
+    pointer-events: initial;
+}
+
+.icon{width: 2rem;}
+.angry{
+    color: red;
+    border-color: red;
+    pointer-events: none;
+}
+
+@media (max-width: 1000px),(max-height: 900px){
+    html{font-size: 90%;}
+    .floatsection{scale: 0.8;}
+}
+
+canvas.hover{
+    cursor: pointer;
+}
+
+.scrollable{
+    overflow-x: hidden;
+    overflow-y: auto;
+}

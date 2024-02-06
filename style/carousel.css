@@ -1,0 +1,87 @@
+.carousel{
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel > img{
+    display: none;
+}
+
+.carousel-images, .carousel-ui{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-images, .carousel{
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-images{
+    height: 100%;
+}
+
+.carousel-images img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.carousel-button{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 10px;
+
+    padding: auto 0;
+    color: lightgray;
+    background: #0004;
+
+    transition: 0.2s ease;
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.carousel-button:hover{
+    color: white;
+    background: #0008;
+}
+
+.carousel-ui{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    justify-content: center;
+
+    width: 100%;
+    padding: 10px 0;
+    background: #0008;
+
+    gap: 20px;
+}
+
+.carousel-ui a{
+    width: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: gray;
+}
+
+.carousel-ui a.carousel-active{
+    background: white;
+}
+
+.carousel-buttons, .carousel-ui{
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.carousel:hover > .carousel-buttons, .carousel:hover > .carousel-ui{
+    opacity: 1;
+}
+
+.carousel-button, .carousel-ui a{
+    cursor: pointer;
+}

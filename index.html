@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/carousel.css">
+    <title>Kévin Grandjean</title>
+</head>
+<body>
+    <a href="assets/Kévin GRANDJEAN.pdf" download="Kévin GRANDJEAN - Résumé.pdf" id="downloadresume" style="display: none;"></a>
+    <canvas id="renderer" class="fullscreen"></canvas>
+
+    <!--AboutMe-->
+    <div idtarget="AboutMe" class="floatsection blackblur column" 
+    style="width: 20vw; min-width: 350px; max-height: 80vh; top: 10%; left: 5%; translate: calc(-10vw - 100%) 0;">
+        <h1>Hello !</h1>
+        <section class="scrollable column">
+            <article>
+                <p>I am <strong class="big">Kévin Grandjean</strong>, a passionate second year student in computer science, at the University of Savoy.</p>
+                <br>
+                <p>Always curious and eager to develop my skillset, I am looking for a fulfilling and versatile job, preferably in the world of game development.</p>
+            </article>
+            <article class="column center">
+                <h3 class="smallvpad">Infos</h3>
+                <div style="width: 80%;">
+                    <div class="row-spaced smallvpad"><p>Date of Birth</p><div class="linejoin"></div><h4>19 July 2005</h4></div>
+                    <div class="row-spaced smallvpad"><p>Nationality</p><div class="linejoin"></div><h4>French</h4></div>
+                    <div class="row-spaced smallvpad"><p>Current Job</p><div class="linejoin"></div><h4 class="textcenter">Student at the USMB<br>IUT Annecy</h4></div>
+                </div>
+            </article>
+        </section>
+        <button onclick="downloadResume(this);">Download Résumé</button>
+    </div>
+    
+    <div idtarget="AboutMe" class="floatsection blackblur column" 
+    style="width: 30vw; min-width: 400px; max-height: 80vh; bottom: 5%; right: 5%; translate: 0 calc(10vh + 100%);">
+        <h1 class="textcenter">About Me</h1>
+        <section class="scrollable column">
+            <article>
+                <h3 class="textcenter">Education and Qualifications</h3>
+                <div class="eventbox">
+                    <h4>2023 - 2024</h4>
+                    <div class="event">
+                        <p>2nd year of <strong>BUT Informatique</strong> (Technical Bachelor's Degree in computer science)</p>
+                        <p class="comment">- University Of Savoy / IUT Annecy - Annecy-le-Vieux, France</p>
+                    </div>
+                </div>
+                <div class="eventbox">
+                    <h4>2019 - 2022</h4>
+                    <div class="event">
+                        <p><strong>French Baccalaureate Maths NSI</strong> (High School diploma specialized in mathematics and computer science) with high honors</p>
+                        <p class="comment">- René Perrin High School - Ugine, France</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 class="textcenter smallvpad">Interests</h3>
+                <div>
+                    <p><strong>Video games</strong> : I love the way they connect people and enable them to share memories.</p>
+                    <ul class="smalllist">
+                        <li><strong>Team Fortress 2</strong> : A long-living Team-Based FPS that still manages to make people laugh.</li>
+                        <li><strong>Minecraft</strong> : A 3D sandbox game where you create the adventures you play.</li>
+                    </ul>
+                </div>
+                <p><strong>Biking & Hiking</strong> : Always great to take a break from work and enjoy the scenery, when possible.</p>
+                <p><strong>3D Modeling</strong> : Helps me to let off some steam and engage in creative activity.</p>
+            </article>
+        </section>
+    </div>
+
+    <!--Skills-->
+    <div idtarget="Skills" class="floatsection blackblur column" 
+    style="width: 30vw; min-width: 400px; max-height: 80vh; bottom: 5%; left: 5%; translate: 0 calc(20vh + 100%);">
+        <h1 class="textcenter">Hard Skills</h1>
+        <article class="textcenter padlines">
+            <p>Learning new technologies and challenging myself as always been a passion of mine.</p>
+            <p>Here is a list of the skills I perform the best in.</p>
+        </article>
+        <section class="scrollable column">
+            <article>
+                <h3 class="textcenter">General-purpose programming</h3>
+                <div class="barcontainer row-spaced">
+                    <h4>C#</h4>
+                    <div class="progressbar"><div class="progress" style="width: 100%;"><div></div></div></div>
+                </div>
+                <div class="barcontainer row-spaced">
+                    <h4>Java</h4>
+                    <div class="progressbar"><div class="progress" style="width: 100%;"><div></div></div></div>
+                </div>
+                <div class="barcontainer row-spaced">
+                    <h4>Python</h4>
+                    <div class="progressbar"><div class="progress" style="width: 90%;"><div></div></div></div>
+                </div>
+            </article>
+            <div class="separator"></div>
+            <article>
+                <h3 class="textcenter smallvpad">Web development (fullstack)</h3>
+                <div class="barcontainer row-spaced">
+                    <h4>HTML + CSS</h4>
+                    <div class="progressbar"><div class="progress" style="width: 75%;"><div></div></div></div>
+                </div>
+                <div class="barcontainer row-spaced">
+                    <h4>JavaScript</h4>
+                    <div class="progressbar"><div class="progress" style="width: 80%;"><div></div></div></div>
+                </div>
+                <div class="barcontainer row-spaced">
+                    <h4>PHP</h4>
+                    <div class="progressbar"><div class="progress" style="width: 70%;"><div></div></div></div>
+                </div>
+            </article>
+            <div class="separator"></div>
+            <article>
+                <h3 class="textcenter smallvpad">Operating systems</h3>
+                <div class="barcontainer row-spaced">
+                    <h4>Windows</h4>
+                    <div class="progressbar"><div class="progress" style="width: 70%;"><div></div></div></div>
+                </div>
+                <div class="barcontainer row-spaced">
+                    <h4>Linux</h4>
+                    <div class="progressbar"><div class="progress" style="width: 60%;"><div></div></div></div>
+                </div>
+            </article>
+            <div class="separator"></div>
+            <article>
+                <h3 class="textcenter smallvpad">Databases</h3>
+                <div class="barcontainer row-spaced">
+                    <h4>PostgreSQL</h4>
+                    <div class="progressbar"><div class="progress" style="width: 70%;"><div></div></div></div>
+                </div>
+            </article>
+            <div class="separator"></div>
+            <article>
+                <h3 class="textcenter smallvpad">Miscellaneous</h3>
+                <div class="barcontainer row-spaced">
+                    <h4>Sockets</h4>
+                    <div class="progressbar"><div class="progress" style="width: 45%;"><div></div></div></div>
+                </div>
+                <div class="barcontainer row-spaced">
+                    <h4>3D Modeling</h4>
+                    <div class="progressbar"><div class="progress" style="width: 45%;"><div></div></div></div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <div idtarget="Skills" class="floatsection blackblur column" 
+    style="width: 18vw; min-width: 250px; top: 10%; right: 5%; translate: 0 calc(-30vh - 100%);">
+        <h1 class="textcenter">Soft Skills</h1>
+        <article class="textcenter column" id="softskills">
+            <p>Self-taught, I am self-directed and able to take initiative.</p>
+            <p>I am precise and analytical.</p>
+            <p>I love learning new things, and lending a hand to my collegues.</p>
+        </article>
+        <article>
+            <h3 class="textcenter smallvpad">Languages</h3>
+            <div class="row-spaced">
+                <p>French</p><div class="linejoin"></div><h4>Native Speaker</h4>
+            </div>
+            <div class="row-spaced">
+                <p>English</p><div class="linejoin"></div><h4>Upper Intermediate</h4>
+            </div>
+            <div class="row-spaced">
+                <p>Italian</p><div class="linejoin"></div><h4>Beginner</h4>
+            </div>
+        </article>
+    </div>
+
+    <!--Projects1-->
+    <div idtarget="Projects1" class="floatsection blackblur column" 
+    style="min-width: 300px; width: 25vw; top: 5%; left: 5%; translate: calc(-30vw - 100%) 0;">
+        <div>
+            <p class="containertype">Personal project</p>
+            <h2 class="textcenter">Le Démineur</h2>
+        </div>
+        <article>
+            <div class="descriptioncontainer">
+                <div class="description">
+                    <p><strong>"Le Démineur"</strong> (The Minesweeper) is a <strong>turn-based multiplayer minesweeper</strong>, where the goal is to clear the grid without touching bombs, to be the last one standing.</p>
+                    <br>
+                    <p>You would not want to be the one losing though, the losers being roughly punished...</p>
+                    <br>
+                    <p>Created with the <strong>C# language</strong>, along with the <a target="_blank" href="https://unity.com/"><strong>Unity Engine.</strong></a></p>
+                </div>
+            </div>
+        </article>
+        <article class="column center">
+            <div class="carousel" style="width: 70%;">
+                <img src="assets/img/demineur-menu.png" alt="">
+                <img src="assets/img/demineur-gameplay.png" alt="">
+            </div>
+        </article>
+    </div>
+
+    <div idtarget="Projects1" class="floatsection blackblur column" 
+    style="min-width: 300px; width: 25vw; bottom: 5%; left: 5%; translate: calc(-30vw - 100%) 0;">
+        <div>
+            <p class="containertype">University project</p>
+            <h2 class="textcenter">HypoluxAdventure</h2>
+        </div>
+        <article>
+            <div class="descriptioncontainer">
+                <div class="description">
+                    <p><strong>HypoluxAdventure</strong> is a <strong>rogue-like</strong> game where Hypolux (you), ventures in a deep cave, looking for a treasure.</p>
+                    <p>Explore random mazes, find chests and get better equipment, because nearby monsters will not rest.</p>
+                    <br>
+                    <p>Created with <strong>Noa GUILLOT</strong> and <strong>Mathieu ROSTAING</strong>, using the <strong>C# language</strong> and the <a target="_blank" href="https://monogame.net/"><strong>Monogame framework</strong></a>.</p>
+                </div>
+            </div>
+        </article>
+        <article class="column center">
+            <div class="carousel" style="width: 70%;">
+                <img src="assets/img/hypolux-menu.png" alt="">
+                <img src="assets/img/hypolux-gameplay1.png" alt="">
+                <img src="assets/img/hypolux-gameplay2.png" alt="">
+                <img src="assets/img/hypolux-gameplay3.png" alt="">
+            </div>
+            <a class="link" target="_blank" href="https://github.com/KevinGr19-Univ/HypoluxAdventure">Download the game (GitHub repository)</a>
+        </article>
+    </div>
+
+    <div idtarget="Projects1" class="floatsection blackblur column" 
+    style="min-width: 300px; width: 25vw; max-height: 70vh; top: 15vh; right: 10%; translate: calc(30vw + 100%) 0;">
+        <h1>Projects</h1>
+        <article>
+            <p>As a self-taught in my early years of computer science, most of my projects are personal and carried out in my free time. Nonetheless, I like to work in a team.</p>
+        </article>
+        <article class="scrollable">
+            <h3 class="textcenter smallvpad">Favorites domains</h3>
+            <div>
+                <p><strong>Video games</strong> : A domain uniting various topics (programming, game design, math, art).</p>
+            </div>
+            <br>
+            <div>
+                <p><strong>Socket programming</strong> : Connecting people unlocks an unlimited amount of ideas.</p>
+                <ul class="smalllist">
+                    <li><strong>Petit Bac (Scattergories)</strong> : My first game (Python and <a target="_blank" href="https://www.pygame.org/wiki/about">Pygame</a>).</li>
+                    <li><strong>Le Démineur</strong> : Turn-based multiplayer minesweeper (C# and <a target="_blank" href="https://unity.com/">Unity</a>).</li>
+                </ul>
+            </div>
+            <div>
+                <p><strong>Computer graphics</strong> : A really deep and complex topic that sparked my curiosity.</p>
+                <ul class="smalllist">
+                    <li>3D Renderer prototype (C# and SFML)</li>
+                    <li>Perlin Noise generator (C# and SFML)</li>
+                </ul>
+            </div>
+        </article>
+        <button idtarget="Projects2">Next page</button>
+    </div>
+
+    <!--Projects2-->
+    <div idtarget="Projects2" class="floatsection blackblur column" 
+    style="min-width: 300px; width: 25vw; bottom: 5%; left: 10%; translate: 0 calc(30vh + 100%);">
+        <div>
+            <p class="containertype">Personal project</p>
+            <h2 class="textcenter">Skill Contest</h2>
+        </div>
+        <article>
+            <div class="descriptioncontainer">
+                <div class="description">
+                    <p><strong>Skill Contest</strong> is one of my many <a target="_blank" href="https://www.minecraft.net/en-us/article/what-minecraft"><strong>Minecraft plugin</strong></a> projects. They are extensions to the original game :</p>
+                    <br>
+                    <p>Multiple teams are stranded on a world, and their goal is to complete the most tasks and achievements, to earn points and win when the time is up.</p>
+                    <p>Engage in bloody battles, betray long-standing friendships, or perform the most difficult tasks to take the lead.</p>
+                    <br>
+                    <p>Created with the <strong>Java language</strong>, along with the <a target="_blank" href="https://www.spigotmc.org/wiki/spigot-plugin-development/"><strong>Minecraft Spigot API.</strong></a></p>
+                </div>
+            </div>
+        </article>
+        <article class="column center">
+            <div class="carousel" style="width: 70%;">
+                <img src="assets/img/skill-contest-settings.png" alt="">
+                <img src="assets/img/skill-contest-success.png" alt="">
+                <img src="assets/img/skill-contest-saul.png" alt="">
+                <img src="assets/img/skill-contest-objectives.png" alt="">
+                <img src="assets/img/skill-contest-endgame.png" alt="">
+            </div>
+            <a class="link" target="_blank" href="https://github.com/KevinGr19/skill-contest">Source code (GitHub repository)</a>
+        </article>
+    </div>
+
+    <div idtarget="Projects2" class="floatsection blackblur column" 
+    style="min-width: 300px; width: 25vw; top: 10%; right: 30%; translate: 0 calc(-30vh - 100%);">
+        <div>
+            <p class="containertype">University project</p>
+            <h2 class="textcenter">MATINFO</h2>
+        </div>
+        <article>
+            <div class="descriptioncontainer">
+                <div class="description">
+                    <p><strong>MATINFO</strong> is a <strong>CRUD</strong> desktop application, with the purpose of managing a school's computer systems and equipments.</p>
+                    <br>
+                    <p>Created with <strong>Mongi OUERGHEMMI</strong> and <strong>Rémi ROCHE</strong>, using the <strong>C# language</strong> and the
+                        <a target="_blank" href="https://learn.microsoft.com/fr-fr/dotnet/desktop/wpf/overview/"><strong>WPF framework</strong></a>.</p>
+                </div>
+            </div>
+        </article>
+        <article class="column center">
+            <div class="carousel" style="width: 70%;">
+                <img src="assets/img/matinfo.png" alt="">
+            </div>
+        </article>
+    </div>
+
+    <div idtarget="Projects2" class="floatsection blackblur column" 
+    style="min-width: 250px; width: 20vw; bottom: 10%; right: 5%; translate: 0 calc(30vh + 100%);">
+        <div>
+            <p class="containertype">Personal project</p>
+            <h3 class="textcenter">3D Modeling</h3>
+        </div>
+        <article>
+            <p>Not a programming project, just a practice I enjoy doing.</p>
+            <p>Here are a couple of 3D renders I made using <a target="_blank" href="https://www.blender.org/"><strong>Blender</strong></a>.</p>
+        </article>
+        <article class="column center">
+            <div class="carousel" style="width: 70%;">
+                <img src="assets/img/3d-bonhomme.png" alt="">
+                <img src="assets/img/3d-bouclier.png" alt="">
+                <img src="assets/img/3d-extracteur.png" alt="">
+                <img src="assets/img/3d-piranha.png" alt="">
+                <img src="assets/img/3d-bateau.png" alt="">
+            </div>
+        </article>
+    </div>
+
+    <div idtarget="Projects2" class="floatsection blackblur column" 
+    style="min-width: 300px; width: 25vw; top: 10%; left: 5%; translate: calc(-30vw - 100%) 0;">
+        <button idtarget="Projects1">Previous page</button>
+    </div>
+
+    <!--ContactMe-->
+    <div idtarget="ContactMe" class="floatsection blackblur column" 
+    style="width: 25vw; min-width: 250px; bottom: 15%; left: 5%; translate: calc(-30vw - 100%) 0;">
+        <h1 class="textcenter">Contact Me</h1>
+        <article>
+            <h3 class="textcenter smallvpad">Contact Information</h3>
+            <div class="row-spaced smallvpad"><img src="assets/img/location.png" alt="" class="icon"><div class="linejoin"></div><h4 class="textcenter">6 rue des Grandes Pièces,<br>Faverges 74210, France</h4></div>
+            <div class="row-spaced smallvpad">
+                <img src="assets/img/mail.png" alt="" class="icon"><div class="linejoin"></div><h4>kevin.grandjean@etu.univ-smb.fr</h4>
+            </div>
+            <div class="row-spaced smallvpad">
+                <img src="assets/img/phone.png" alt="" class="icon"><div class="linejoin"></div><h4>+33 6 38 12 30 76</h4>
+            </div>
+            <div class="row-spaced smallvpad">
+                <img src="assets/img/linkedin.png" alt="" class="icon"><div class="linejoin"></div><a target="_blank" href="https://www.linkedin.com/in/k%C3%A9vin-grandjean-046307259/"><h4>Kévin GRANDJEAN</h4></a>
+            </div>
+        </article>
+    </div>
+
+    <div idtarget="ContactMe" class="floatsection blackblur column" 
+    style="width: 35vw; min-width: 250px; max-height: 70vh; top: 15%; right: 5%; translate: calc(30vw + 100%) 0;">
+        <h1 class="textcenter">References</h1>
+        <section class="scrollable column">
+            <article>
+                <div class="eventbox">
+                    <h4>Pascal Colin</h4>
+                    <div class="event">
+                        <p>UML, SQL and Project Management Teacher at the USMB, IUT Annecy, France</p>
+                        <p class="comment">pascal.colin@univ-smb.fr</p>
+                    </div>
+                </div>
+                <div class="eventbox">
+                    <h4>Benoît Diard</h4>
+                    <div class="event">
+                        <p>Programming Teacher at the USMB, IUT Annecy, France</p>
+                        <p class="comment">benoit.diard@univ-smb.fr</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <!--Navigation-->
+    <div id="ui" class="fullscreen column">
+        <!-- <div style="flex: 1;"></div> -->
+        <div class="center">
+            <div id="buttons" class="blackblur buttonbar row-around">
+                <button idtarget="AboutMe">About Me</button>
+                <button idtarget="Skills">Skills</button>
+                <button idtarget="Projects1">Projects</button>
+                <button idtarget="ContactMe">Contact Me</button>
+            </div>
+        </div>
+    </div>
+    <div class="cornerbutton blackblur" style="padding: 10px;">
+        <button id="shadowbutton"></button>
+    </div>
+
+    <!--Lightbox-->
+    <div id="lightbox" class="blackblur fullscreen center">
+        <div class="fullscreen" onclick="closeLightbox();"></div>
+        <button class="cornerbutton" onclick="closeLightbox();">Fermer</button>
+        <div id="lightboxcontainer" class="center"></div>
+    </div>
+    
+    <!--Loading stuff-->
+    <div id="loading_screen" class="blackblur fullscreen column center">
+        <div id="loading_bar">
+            <div id="loading_bg"></div>
+        </div>
+        <h2 id="loading_text"></h2>
+    </div>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script class="script" src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js" defer onerror="loadingError();"></script>
+    <script type="importmap" defer>
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script class="script" type="module" src="js/3dscene.js" defer onerror="loadingError();"></script>
+</body>
+</html>

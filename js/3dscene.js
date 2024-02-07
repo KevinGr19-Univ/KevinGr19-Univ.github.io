@@ -220,7 +220,7 @@ class World {
             this.goToPoint("AboutMe", 0);
         },
         (req) => {
-            let progress = (req.loaded / req.total * 100).toFixed(1);
+            let progress = math.min(req.loaded / req.total * 100, 100).toFixed(1);
             loading_text.innerText = `${progress} %`;
             loading_bg.style.width = `${progress}%`;
         },
